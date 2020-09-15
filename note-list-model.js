@@ -1,6 +1,6 @@
 class Notelist {
 constructor() {
-this.arr = ["Note1","Note2","Note3"]
+this.arr = []
 }
 addNewNote(note) {
 this.arr.push(note)
