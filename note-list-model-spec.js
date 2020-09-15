@@ -1,7 +1,7 @@
-function addNewNoteIsReturned() {
-  let note = new Notelist();
-  note.addNewNote("Hello world")
-  assert.isEqual(note.arr.length,1)
+function testNewNoteIsReturned() {
+  let noteList = new NoteListModel();
+  noteList.addNewNote("Hello world")
+  assert.isEqual(noteList.notes.length, 1)
 }
 
-addNewNoteIsReturned()
+testNewNoteIsReturned()

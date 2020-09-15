@@ -1,5 +1,5 @@
 function testMessageIsReturned() {
-  let note = new Note("Here is the text");
+  let note = new NoteModel("Here is the text");
   assert.isEqual(note.text, "Here is the text");
 }
 

@@ -1,8 +1,13 @@
-class Notelist {
-constructor() {
-this.arr = []
-}
-addNewNote(note) {
-this.arr.push(note)
-}
+class NoteListModel {
+  constructor() {
+    this.notes = []
+  }
+  addNewNote(note) {
+    var newNote = new NoteModel(note)
+    this.notes.push(newNote)
+  }
+
+  returnNotes() {
+    this.notes
+  }
 }
