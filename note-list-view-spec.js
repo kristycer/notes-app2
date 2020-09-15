@@ -1,21 +1,23 @@
-function testNoteListReturned() {
+function testNoteReturned() {
   let noteListModel = new NoteListModel();
-  noteListModel.addNewNote("Here is my Note")
+
+  noteListModel.addNewNote("Here is my note")
 
   let noteListView = new NoteListView(noteListModel.returnNotes());
 
-  assert.isTrue(noteListView.htmlList(), '<ul><li><div>Here is my Note<div><li><ul>')
+  assert.isEqual(noteListView.html(), '<ul><li><div>Here is my note<div><li><ul>')
 }
 
 function testMultipleNotesReturned() {
   let noteListModel = new NoteListModel();
-  noteListModel.addNewNote("Here is my Note")
+
+  noteListModel.addNewNote("Here is my note")
   noteListModel.addNewNote("Here is my second note")
 
   let noteListView = new NoteListView(noteListModel.returnNotes());
 
-  assert.isTrue(noteListView.htmlList(), '<ul><li><div>Here is my Note<div><li> <li><div>Here is my second note<div><li><ul>')
+  assert.isEqual(noteListView.html(), '<ul><li><div>Here is my note</div></li><li><div>Here is my second note</div></li></ul>')
 }
 
-testNoteListReturned()
+testNoteReturned()
 testMultipleNotesReturned()
