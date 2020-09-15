@@ -4,10 +4,10 @@ class NoteListModel {
   }
   addNewNote(note) {
     var newNote = new NoteModel(note)
-    this.notes.push(newNote)
+    this.notes.push(newNote.returnNote())
   }
 
   returnNotes() {
-    this.notes
+    return this.notes
   }
 }
